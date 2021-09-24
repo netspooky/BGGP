@@ -1,0 +1,15 @@
+Input	SHA256 : AB0C35065D65008C38D572DA3D77F04BE4E79C31BC24C7B7087607AF062244D4
+
+COM part: rename to .com, run in DOS or 32-bit Windows.  Returns errorlevel 2.
+Also runs as Javascript
+
+COM disassembly:
+
+0100: das                     ;garbage
+0101: das                     ;garbage
+0102: mov     ax, 4C02        ;set up errorlevel
+0105: int     21h             ;return
+
+Javascript disassembly:
+//...
+the '//' is a comment field, the rest of the line is ignored

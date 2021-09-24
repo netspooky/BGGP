@@ -1,0 +1,44 @@
+Input	SHA256 : 5A20152C728D730A92ACAE336A0F9970EF8055284E4073023EA38F3F91CCB281
+
+COM part: rename to .com, run in DOS or 32-bit Windows.  Returns errorlevel 2.
+COM part: 4096 bytes long binary section.
+
+Also runs as Bash, Batch, Javascript, Shell script, VBScript
+Bash part: 4096 bytes long, 4096 bytes overlap with COM part.
+Batch part: 4096 bytes long, 4096 bytes overlap with COM part.
+Javascript part: 4096 bytes long, 4096 bytes overlap with COM part.
+Shell script part: 4096 bytes long, 4096 bytes overlap with COM part.
+VBScript part: 4096 bytes long, 4096 bytes overlap with COM part.
+
+COM disassembly:
+
+0100: jb      0167            ;not taken
+0102: insw                    ;garbage
+0103: cmp     ax, 2F31h       ;garbage
+0106: das                     ;garbage
+0107: and     ax, [bx+di+41h] ;garbage
+010A: inc     cx              ;garbage
+010B: inc     cx              ;garbage
+...
+10EE: inc     cx              ;garbage
+10EF: and     al, 30h         ;partial zero
+10F1: and     al, 40h         ;zero AL (DAS/AND altered it)
+10F3: xor     ax, 212Ch       ;AX=212C
+10F6: sub     al, 5Fh         ;AX=21CD
+10F8: push    ax              ;INT 21h on stack
+10F9: sub     al, 7Fh         ;AL=4E
+10FB: xor     ax, 6D4Ch       ;AX=4C02
+10FE: push    sp
+10FF: retn                    ;ASCII JMP SP (runs INT 21h)
+
+Bash, Shell disassembly:
+rem=1//#...
+the '#' is a comment field, the rest of the line is ignored
+
+Javascript disassembly:
+rem=1//...
+the '//' is a comment field, the rest of the line is ignored
+
+VBScript disassembly:
+rem...
+the 'rem' is a comment field, the rest of the line is ignored

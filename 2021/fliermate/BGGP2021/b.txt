@@ -1,0 +1,8 @@
+%PDF-1.
+1 0 obj<</Kids[<</Resources<<>>/Contents 2 0 R/Parent 1 0 R/Type/Page/MediaBox[0 0 99 99]>>]/Type/Pages/Count 1>>endobj
+2 0 obj<<>>stream
+BT/ 9 Tf(BGGP 2021)' ET
+endstream
+endobj
+3 0 obj<</Type/Catalog/Pages 1 0 R>>endobj
+trailer<</Info<</Author(BGGP)>>/Root 3 0 R>>

@@ -1,0 +1,15 @@
+Fileglot is both an executable DOS COM (.com) file, and a ASCII text file (.txt).
+It is 28 bytes long (and both file types use all bytes), and uses only values that are printable ASCII characters (0x20 - 0x7E), carriage returns (0xD), or line feeds (0xA).
+Any text editor that can open .txt files should be able to open the file, and running the 'file' command on the program under Linus will detect the program as "ASCII text, with CR, LF line terminators".
+To execute the program, run it as a .com file under DosBox or MS DOS.
+
+The program works by taking advanatage of the fact that neither .txt or .com files have any headers, and the only restriction for text files is that all symbols should be valid ASCII characters.
+COM files are simply loaded into memory starting at address 0x100, and then execution starts from that address. So if we restrict ourselves to using only machine instruction and data values that happen to fall into the ASCII range, we can have an executable program that is also text. Theoretically, you could even create such an executable by typing in Notepad. For 16 bit x86 code, we are fortunate in that there are several useful instructions in this range such as Push, Pop, Inc, Dec, And, Xor. Furthermore, .com files have no form of memory protection, so to create self-modifying code, all we need to do is write instructions where we want them. This allows us to create any instruction that we might want using a combination of allowed instructions and data.
+For Fileglot, the basic sequence of instructions we want to run is:
+mov ah,2	; Want DOS interrupt 2 - print character in dl to STDOUT
+mov dl,'2'	; Charater to print
+int 21h		; Call DOS interrupt to print
+int 20h;	; Exit program
+Setting ah and dl is pretty simple to do using combinations of push/pop and binary operators, but the 'int' instructions have the value 0xCD, which isn't valid ASCII, so they need to be constructed at runtime using valid operations, and written to memory with the only valid memory write instruction avaliable - push. To do this, we first use a comination of instructions to set the stack pointer to 4 bytes past the end of the code. We then generate the 'int 20h' instruction, and push it, writing in to two bytes past the end of the code. Then we generate 'int 21h' and push it a the end of the code. We are now free to set dl and al with the needed values, and then just let the code keep running past the end so that it executes the generated instructions. 
+
+Reading the file as text is valid, but the text is nonsense, since the program is optimized for size. With a larger program, it would be possible to have nearly arbitray text.

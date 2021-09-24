@@ -1,0 +1,23 @@
+Polyglot File Submission By Ben Greenwood - ben.greenwood.ctr@gmail.com
+
+File 	Description							Start	End		Testing With	Testing OS	Notes
+exe		Windows 32-bit Portable Executable	0x0		0x9FF	command line	Windows 10	Executable segment is 0x200 - 0x7FF
+exe		MS-DOS EXE format					0x0		0x80	DOSBox 0.74-3	Ubuntu 20	Executable segment is 0x40 - 0x7F
+html	HyperText Markup Language web page	0x0		0x9FF	Firefox 90.0.2	Windows 10
+tga		Truevision TGA image				0x0		0x9D9	Paint.net 4.2	Windows 10
+pdf		Portable Document Format			0x2A9	0x3CB	Firefox 90.0.2	Windows 10
+mp3		MPEG Audio Layer III				0x3CB	0x7E8	VLC 3.0.11		Windows 10
+zip		PKWARE Archive file format			0x1DA	0x9FF	WinRAR 5.4		Windows 10
+7z		7-Zip Archive file format			0x1F0	0x994	WinRAR 5.4		Windows 10
+rar		Roshal Archive file format			0x212	0x942	unrar 5.61		Ubuntu 20
+
+Score = 21446/2560 = 8.377344
+
+To build this polyglot file, I started with a tiny mp3 file, since that format doesn't care where in the file it is located. To that mp3, I prepended a small pdf, since those can be read by some programs as long as they start within the first 1K of the file. Next, I added part of a html file. Browsers try and interpret a html file from the beginning, but many of them are extremely tolerant of bad input. I abuse this by having the partial html file start with a closing comment tag and end with an opening comment tag. The trailing comment tag will cause the browser to skip over everything after the intended html, and doesn't need to be closed, while the initial closing comment tag will be paired later on in the polyglot construction. This forms what I consider to be the nucleus of the polyglot file, as the rest of the file types are wrapped around it, or laid over top.
+
+I then assembled a small windows executable that had an executable section roughly the same size as this nucleus, with the main function at the very end. This program used printf to print '2' and then called exit. Using a hex editor, I took the main function, and the used portion of the import section, and appended it to the nucleus. I then archived the nucleus 
+in rar, then 7z, then zip, with compression disabled each time. This yielded multiple archives nested inside each other that could still be read properly. I performed this archiving process a few times, adjusting the padding at end of the attached section from the exe, until the resulting file had the code for main and the imports at the expected distance from the end of the file. This allowed me to overwrite the end of the original exe file with the new data, while keeping main and the import table at the correct offset. This yielded a working exe that contained nearly all of my target file types.
+
+The final task was overlaying the tga, and completing the html. Exe files must start with 'MZ', followed by a DOS header/stub, and then the actual PE header for the exe. I want to keep the DOS stub working, so that the file will be a valid DOS executable as well. Fortunately, the tga header and DOS header can overlap without too many issues. For the tga, 'MZ' corresponds to a reserved image type and an info field length of 90, both of which are fine for my purposes. The tga image type falls on the DOS 'extra bytes' field, which is flexible, so I can set that to 3 to get an uncompressed greyscale image. The next DOS fields (pages, relocation itmes, header size, minimum allocation) overlap the unused tga color map specification, and image origin coordinates. I do need to set reasonable values for the tga image width, height, pixel depth, and image descriptor fields, but these overlap with the DOS header values for the maximum allocation, and initial values for the ss and sp registers, which I don't care about. This ends the tga header.
+
+This just leaves completing the html file. I want to have a html comment tag as soon as possible, since the browser will interpet anything before that as text, and display it on the screen when loading the file. Unfortunately, the only place in the DOS header this would work is already used by the tga, so it has to go after the DOS header. This means that the browser will display the 'MZ' from the start of the file, plus any other printable ASCII characters in the DOS & tga headers. Fortunately, the only fields that this is really an issue for is the tga image dimentions, which I can manipulate to use as much of the file data as possible (to maximise the score) while keeping them unprintable. For this, I settled on using 127 by 19. Alternately, I could have used printable characters and adjusted my html data to make sense with it, but that would potentially require repacking the whole nucleus. 
