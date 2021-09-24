@@ -6,6 +6,8 @@ Challenge Announcement and Rules: https://n0.lol/bggp/2021/
 
 This page will be updated as writeups and other resources come in!
 
+Each file mentioned is included in this repo. Score files are in PNG and ANS format. Every entry was marked up to detail the various file overlays and other tricks done.
+
 # Category 1
 Category 1 files aim to be the smallest polyglot of a given combination of files that returns or prints the value "2".
 
