@@ -63,7 +63,7 @@ Links:
 AUTHOR: qkumba
 DATE: 20210619
 SIZE: 15
-FILES: COM, Javascript
+FILES: COM, Bash/Shell, Batch, Javascript, VBScript
 SHA256: 4bfe10fb3cb8f70c221b010d33f56923b2329dd5027b431c2a69437fc9db76bc
 ```
 Links:
