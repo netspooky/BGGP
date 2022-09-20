@@ -1,0 +1,27 @@
+This was the original entry, but it was updated in this writeup https://www.da.vidbuchanan.co.uk/blog/bggp3.html
+
+---BEGIN BGGP3 ENTRY---
+Name or handle: Retr0id
+Contact Info: https://twitter.com/David3141593
+Website, twitter, other online presence: https://twitter.com/David3141593
+Target Software and Version: https://chip8.danirod.es/ version 0.2.0 -
+https://github.com/danirod/chip8/releases/download/0.2.0/chip8_0.2.0-1ubuntu1_amd64.deb
+Description of Target Software's Environment (Platform/OS, Setup
+Instructions, etc.): Ubuntu LTS 20.04 x86-64 (should work on any
+version you can install that .deb on)
+Target File Type: ROM
+SHA256 Hash: ceb262b913fb192ef5f54ef2ee519454283df4086935f63b97a9147c28396f31
+Brief Description of Crash: Increment I to index out-of-bounds memory,
+overwrite a function pointer to call exit(3)
+Was this a new crash, or a known bug? New crash!
+Link to PoC video, screenshot, or console output, if any:
+
+$ chip8 exploit.rom
+$ echo $?
+3
+
+Link to writeup, if any:
+https://gist.github.com/DavidBuchanan314/077e5ac1cbb7354b2bf4345d3e6a09e2
+CVE or other acknowledgement, if any: https://github.com/danirod/chip8/pull/35
+File contents (base64 encoded please): bMH8Hn4BPkASAmBgYRDxVWMD454=
+---END BGGP3 ENTRY---

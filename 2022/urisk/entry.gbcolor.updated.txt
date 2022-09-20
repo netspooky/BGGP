@@ -1,0 +1,28 @@
+  ---BEGIN BGGP3 ENTRY---
+  Name or handle: Urisk
+ 
+  Website, twitter, other online presence: https://twitter.com/UriskLyErg
+ 
+  Target Software and Version: Gameboy Colour BIOS0
+ 
+  Description of Target Software's Environment (Platform/OS, Setup Instructions, etc.): If testing on a physical Gameboy Colour, write the ROM at the offset 0x100 (Or use the faultrom.gb and write from location 0).
+  For testing I used a Virtual Boy with a personally compiled version of the CGB bios. This BIOS can be generated using https://github.com/ISSOtm/gb-bootroms and compiled with RGBDS https://rgbds.gbdev.io/. Or you can use the cgb0.bin provided in the github writeup.
+  In virtual boy, select options > gameboy and tick use GBC bios. Then select options > gameboy > configure > bootroms and select the location of the CGB bios.
+  Simply load the ROM after that using file > open and select the rom on disk.
+ 
+  Target File Type: ROM
+ 
+  SHA256 Hash: 74893A5B0E684D43EBB87419AE91B1F8F39E3FB73DAC9158D9AD6A1733562EBF  (ROM on disk faultyrom.gb), 5AFAD54727D27FCF4A02265951F3CB6E63A2C7307B3D60A72A0C26275FDD440D  (Just the HEX onlyBGGPEntry.gb)
+ 
+  Brief Description of Crash: The crash is a hard coded infinite loop written in Gameboy assembly. If this doesn't count as enough of a crash I can modify it for the same effect to either slide into inappropriate memory, or cause the CPU to halt by including a malformed OP code. (Both of these have potentially deleterious effects on physical hardware hence opting for this alternative version).
+ 
+  Was this a new crash, or a known bug? Known bug/s
+ 
+  Link to PoC video, screenshot, or console output, if any: https://github.com/UriskLyErg/BGGP3/blob/main/FinalRom.PNG
+ 
+  Link to writeup, if any: https://github.com/UriskLyErg/BGGP3
+ 
+  CVE or other acknowledgement, if any: N/A
+ 
+  File contents (base64 encoded please): wxwBAM7tZmbMDQALA3MAgwAMAA0ACBEfiIkADiErAR4QBoAqAgMdIPrDMwACAAUAAQACAAEABQAC3w==
+  ---END BGGP3 ENTRY---

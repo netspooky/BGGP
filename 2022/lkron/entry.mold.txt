@@ -1,0 +1,58 @@
+---BEGIN BGGP3 ENTRY---
+  Name or handle: lkron
+  Website, twitter, other online presence:
+
+    www.louiskronberg.de
+
+    www.twitter.com/LouisKronberg 
+
+  Target Software and Version: 
+
+    mold v1.2.1
+
+    https://github.com/rui314/mold
+
+  Description of Target Software's Environment (Platform/OS, Setup Instructions, etc.):
+
+         Environment
+
+        linux 5.15.4
+
+        make
+
+        mold v1.2.1
+
+    Commands to reproduce the crash
+
+             git clone https://github.com/rui314/mold
+             git checkout v1.2.1
+             make
+
+             ./mold crash.elf
+
+  Target File Type: elf
+  SHA256 Hash:
+
+    349177e41ea686ad6e11ccbd488040e00d2e334f3d14a3a94bc4d9746ac304cc
+
+  Brief Description of Crash:
+
+    The elf header sets e_shnum = 0xffff but there aren't 0xffff sections in the file.
+
+    This causes mold to read out of bounds of the mmaped file causing a segfault. 
+
+  Was this a new crash, or a known bug? New crash
+  Link to PoC video, screenshot, or console output, if any:
+
+    http://www.louiskronberg.de/bggp3/gdb_another_crash.png
+
+  Link to writeup, if any: 
+
+    http://www.louiskronberg.de/bggp3/writeup.html
+
+  CVE or other acknowledgement, if any:
+  File contents (base64 encoded please):
+
+    f0VMRgEBAAAAAAAAAAAAAAEAAwD//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8=
+
+  ---END BGGP3 ENTRY---

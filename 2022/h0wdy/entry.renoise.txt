@@ -1,0 +1,30 @@
+---BEGIN BGGP3 ENTRY---
+
+Name or handle: h0wdy
+
+Website, twitter, other online presence: http://h0wdy.partners, https://twitter.com/b10tt0
+
+Target Software and Version: Renoise 3.4.2 (Latest)
+
+Description of Target Software's Environment: 5.15.0-46-generic 20.04.1-Ubuntu x86_64 GNU/Linux
+
+Target File Type: xrns
+
+SHA256 Hash: 78dd5f895adc2e53c2900f9cc057a6e908680c6098b453d569b6d018d1b86391
+
+Brief Description of Crash: "xrns is rlly just a zip w/ an xml file in it. Renoise does not check the xml except to look for the tag: <RenoiseSong/>, a search for data beyond that tag results in SIGSEGV :]"
+
+Was this a new crash, or a known bug: "This crash was new to me, but not to them! I reported it to bug@renoise.com, and they expressed as much."
+
+Link to PoC video, screenshot, or console output, if any: http://h0wdy.partners/bggp/media/bggp3.gif
+
+Link to writeup, if any: http://h0wdy.partners/bggp/3.html
+
+CVE or other acknowledgement, if any: Many thanks to the Thug Crowd and everyone's infinite knowledge and wisdom shared <3
+
+File contents (base64 encoded please):
+UEsDBAoAAAAAAJpTH1Xn9wR0DgAAAA4AAAAIAAAAU29uZy54bWw8UmVub2lzZVNvbmcvPlBLAQIe
+AwoAAAAAAJpTH1Xn9wR0DgAAAA4AAAAIAAAAAAAAAAEAAAC0gQAAAABTb25nLnhtbFBLBQYAAAAA
+AQABADYAAAA0AAAAAAA=
+
+---END BGGP3 ENTRY---

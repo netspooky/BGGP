@@ -1,0 +1,40 @@
+---BEGIN BGGP3 ENTRY---
+Name or handle: q3w3e3
+Website, twitter, other online presence: https://twitter.com/pupOnSecurity/
+Target Software and Version: Portal 2 (any version), and likely any other source games (CS:GO should work and is free)
+Description of Target Software's Environment (Platform/OS, Setup Instructions, etc.): Portal 2 running in windows was tested. Setup includes:
+
+1: launch portal 2
+2: run `playdemo path/to/demo/file`
+
+Target File Type: .dem
+SHA256 Hash: 75f25206194ae5101d35781b59479e224538cad29dbac27d34193a2aeea6dd8c
+Brief Description of Crash: Infinite loop caused by an alias running itself
+Was this a new crash, or a known bug? I believe it is a known issue
+Link to PoC video, screenshot, or console output, if any: 
+Link to writeup, if any:
+CVE or other acknowledgement, if any:
+File contents (base64 encoded please):
+
+SEwyREVNTwAEAAAA0QcAAApQb3J0YWwyOmRlbW8AAApcX19fX19fX19fLwAAAAAKICAgICAvXAAA
+AAAAAAAAClRoaXMgc2VjdGlvbiBpcyB0aGUgc2VydmVyIG5hbWUsIGJlZm9yZSBpdCBhcmUgYSBz
+dHJpbmcgY29udGFpbmluZyAiSEwyREVNTwAiICh5ZXMsIHdpdGggdGhlIG51bGwpCmFuZCB0d28g
+NCBieXRlIGludCBpbmNsdWRpbmcgZGVtbyBhbmQgbmV0d29yayBwcm90b2NvbCBpZGVudGlmaWVy
+cy4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoKAAAAAAAAAAAAAAAAAAAAAAAAeFh4Q2hhcmxv
+dHRlNjl4WHgAAAAAAAAAAAAAClxfX19fX19fX19fX19fXy8KICAgICAgIC9cAAAAAAAKQ2xpZW50
+IG5hbWVzIGFyZSBzdG9yZWQgaGVyZS4gRWFjaCBibG9jayBpbiB0aGUgaGVhZGVyIGlzIGEgMjYw
+IGJ5dGUgc3RyaW5nLCBhbmQgcGFyc2luZyBzZWVtcyBwcmV0dHkgcm9idXN0LCwsCldlIHdpbGwg
+Y3Jhc2ggdGhlIGdhbWUgYnkgY2F1c2luZyBhbiBpbmZpbml0ZSBsb29wLCBidXQgZmlyc3QsIG1v
+cmUgaGVhZGVyLi4uAAoKAAAAAAAAAABmaW5hbGU0X3NraXAAAAAAAAAAAAAAAApcX19fX19fX19f
+LwAAAAAKICAgICAvXAAAAAAAAAAACgBNYXAgbmFtZSBsaXZlcyBoZXJlAAAAAAAAAAAAAAAACgAA
+AAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAA
+AAAAACAgU08gTVVDSCBST09NAAogICAgICBGT1IAAAAAAAAKICAgQUNUSVZJVElFUwAACgoAAAAA
+AAAAAAAAAAAAAAAKAAAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHBv
+cnRhbDMAAAAAAAAAAAAAAAAKXF9fX18vAAAAAAAAAAAACiAgL1wAAAAAAAAAAAAAAApHYW1lIGRp
+cmVjdG9yeQAKAAAAAAAAAAAAAAAAAAAACkJlbG93IHRoaXMgcG9pbnQgYXJlIGZvdXIgbnVtYmVy
+cywKYSBmbG9hdCBhbmQgdGhyZWUgaW50LiBUaW1lLCBmcmFtZXMsIHRpY2tzLCBzaWdub25sZW5n
+dGguClRoaXMgaXMgZm9sbG93ZWQgYnQgdGhlIDFzdCBmcmFtZXMgY29uc29sZSBjb21tYW5kCiBf
+X19fX19fX19fXwAAAAoALyAgICAgICAgICAgAAAAXAqCv7z///+NBAAA/////wQAAAAAAAwAAABh
+bGlhcyBhIGE7YQA=
+
+---END BGGP3 ENTRY---

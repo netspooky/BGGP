@@ -1,0 +1,53 @@
+ ---BEGIN BGGP3 ENTRY---
+
+Name or handle:
+
+    Droogy
+
+Website, twitter, other online presence:
+
+    droogy.tech
+    twitter.com/0xDroogy
+
+Target Software and Version:
+
+    qterminal 0.17.0
+
+Description of Target Software's Environment (Platform/OS, Setup Instructions, etc.):
+
+    Platform: Pop!_OS 22.04 LTS x86_64
+    Setup Instructions: “sudo apt install qterminal”
+
+Target File Type:
+
+    txt
+
+SHA256 Hash:
+
+    9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa
+
+Brief Description of Crash:
+
+    qterminal allows for an option to supply commands to be run in a new terminal. When the string “0” is sent as a command, the terminal launches and crashes immediately.
+
+Was this a new crash, or a known bug?
+
+    Possibly a new crash. I was unable to determine if this is new or possibly related to this old bug mentioned in this GitHub issue, https://github.com/lxqt/qterminal/issues/354
+
+Link to PoC video, screenshot, or console output, if any:
+
+    See attached (output.png).
+
+Link to writeup, if any:
+
+    N/A
+
+CVE or other acknowledgement, if any:
+
+    N/A
+
+File contents (base64 encoded please):
+
+    MAo=
+
+---END BGGP3 ENTRY---

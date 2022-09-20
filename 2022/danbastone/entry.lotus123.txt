@@ -1,0 +1,16 @@
+---BEGIN BGGP3 ENTRY---
+Name or handle: Dan Bastone
+Website, twitter, other online presence: https://github.com/dbastone
+Target Software and Version: Lotus 1-2-3 R3 for Linux < 1.0.0rc3 (https://github.com/taviso/123elf/tree/v1.0.0rc2)
+Description of Target Software's Environment (Platform/OS, Setup Instructions, etc.): Linux, build instruction in Github repo
+Target File Type: WK3
+SHA256 Hash: e915467a1aea2adfbe9ea26b4117d15bae32708bb0e0c1a142162606528a07ea
+Brief Description of Crash: Stack overflow
+Was this a new crash, or a known bug? New
+Link to PoC video, screenshot, or console output, if any: The process exits with a return value of 3.  Terminal echo is disabled when the exploit happens, so you'll have to "blindly" type "echo $?" which will output the 3.
+Link to writeup, if any: https://github.com/taviso/123elf/issues/103 and https://github.com/taviso/123elf/pull/104
+CVE or other acknowledgement, if any: CVE-2022-39843 https://github.com/taviso/123elf/security/advisories/GHSA-mchg-c39f-96pj
+File contents (base64 encoded please): AAAFAAAQBAAREwAVAAAAAAD+/v7+/zMzMzO8yhIIQM2AMw==
+---END BGGP3 ENTRY---
+
+"I shaved off another 4 bytes from the exploit I posted in the original Github issue, so it's now 34 bytes."

@@ -1,0 +1,41 @@
+---BEGIN BGGP3 ENTRY---
+
+Name or handle: teck
+
+Website, twitter, other online presence: @tecknicaltom on Twitter
+
+Target Software and Version: mediainfo v21.09
+
+Description of Target Software's Environment (Platform/OS, Setup Instructions, etc.): affected version of mediainfo is the default version packaged for Ubuntu 22.04
+
+Target File Type: garbage binary
+
+SHA256 Hash: b484cba221e554178839c38dbf98f58d9a777dfbb9d27f9b6ac05ae22480eaac
+
+Brief Description of Crash: mediainfo segfaults on given file
+
+Was this a new crash, or a known bug? bug appears to be fixed in newer versions of mediainfo, but unknown if it was explicitly known
+
+Link to PoC video, screenshot, or console output, if any:
+
+    docker run -it --rm ubuntu:22.04
+
+root@d27d16219806:/# apt-get update >/dev/null && apt-get install -y mediainfo xxd >/dev/null 2>&1
+root@d27d16219806:/# mediainfo --version
+MediaInfo Command line,
+MediaInfoLib - v21.09
+root@d27d16219806:/# echo -n '<!' > /tmp/file
+root@d27d16219806:/# xxd /tmp/file
+00000000: 3c21 <!
+root@d27d16219806:/# mediainfo /tmp/file
+Segmentation fault (core dumped)
+
+Link to writeup, if any:
+Crash was found via fuzzing with honggfuzz using a variety of image files for the initial corpus. As newer versions of mediainfo (e.g. 22.03) do not appear affected, I did not spend more time debugging or triaging.
+
+CVE or other acknowledgement, if any: N/A
+
+File contents (base64 encoded please):
+PCE=
+
+---END BGGP3 ENTRY---

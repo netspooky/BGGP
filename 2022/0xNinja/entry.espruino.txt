@@ -1,0 +1,14 @@
+---BEGIN BGGP3 ENTRY---
+Name or handle: 0xNinja
+Website, twitter, other online presence: 0xninja.fr twitter/@0x_Ninja github/OxNinja
+Target Software and Version: Espruino 2V14
+Description of Target Software's Environment (Platform/OS, Setup Instructions, etc.): UNIX, build with `make`
+Target File Type: Plaintext JS script
+SHA256 Hash: 7a6a694eea32480983e5ea9b92311416db8f74cbce36b8a0dbd1d39b845a8fed
+Brief Description of Crash: lexer crash on non UTF-8 character, SEGFAULT
+Was this a new crash, or a known bug? New crash, unknown
+Link to PoC video, screenshot, or console output, if any: N/A
+Link to writeup, if any: https://0xninja.fr/bggp3/
+CVE or other acknowledgement, if any: N/A
+File contents (base64 encoded please): da5sCg==
+---END BGGP3 ENTRY---

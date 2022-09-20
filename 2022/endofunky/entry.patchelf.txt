@@ -1,0 +1,17 @@
+---BEGIN BGGP3 ENTRY---
+Name or handle: endofunky
+Website, twitter, other online presence: https://xoreaxeax.com / https://twitter.com/endofunky
+Target Software and Version: patchelf / 0.15.0 and current master (c2b419dc2a0d6095eaa69b65ad5854ce847bdd01)
+Description of Target Software's Environment (Platform/OS, Setup Instructions, etc.):
+Tested on Linux: Debian and NixOS. Instructions: https://github.com/NixOS/patchelf/#via-autotools
+Target File Type: ELF binary
+SHA256 Hash: Git commit SHA fine? It's c2b419dc2a0d6095eaa69b65ad5854ce847bdd01
+Brief Description of Crash: Segmentation fault due to sh_offset not being validated
+Was this a new crash, or a known bug?
+Link to PoC video, screenshot, or console output, if any: Included in write up
+Link to writeup, if any: https://xoreaxeax.com/b/bggp3
+CVE or other acknowledgement, if any: Opened bug report and PR on GitHub, not response from maintainers so far.
+File contents (base64 encoded please):
+f0VMRgEBAQAuaW50ZXJwAAIAAwABAAAAAAAAAAgAAAAMAAAAAAAAADQAIAAAACgAAgAAAAAAAAAB
+AAAAAAAAAAAAAAD/////AAAAAAAAAAAAAAAAAAAAAAAAAAA=
+---END BGGP3 ENTRY---

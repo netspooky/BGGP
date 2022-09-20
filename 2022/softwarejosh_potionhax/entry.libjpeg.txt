@@ -1,0 +1,30 @@
+---BEGIN BGGP3 ENTRY---
+  Name or handle:
+    Josh and Sarah
+  Website, twitter, other online presence:
+    @softwarejosh and @potionhax
+  Target Software and Version:
+    libjpeg-turbo, libjpeg-turbo-2.1.4 (version id)
+  Description of Target Software's Environment (Platform/OS, Setup Instructions, etc.):
+    libjpeg-turbo-2.1.4, gcc 12.2.0, 5.19.2-artix1-2, AMD Ryzen 9 5900HS with Radeon Graphics
+    To reproduce:
+        Clone this broken testing app: git clone https://github.com/petab1te/bggp3harness
+        Compile with: gcc jpeg_sample.c
+        Run the test app with the safe image to prove it works under perfect conditions: ./a.out test.jpg
+        Run the test app with the provided altered image: ./a.out crash.jpeg
+  Target File Type:
+    binary exucatble and .jpeg
+  SHA256 Hash:
+    89eadb8aa17f9235933f1ec6ff662f5e1717bfed  crash.jpeg
+    e29f4ec48afd19633a41eff5be4495ab28f7a950  a.out (due to my static linking during testing this may vary)
+  Brief Description of Crash:
+    This is a segfault in jccolor-avx2.asm that occurs in some programs that incorrectly guess properties of the image.
+  Was this a new crash, or a known bug?
+    new
+  Link to PoC video, screenshot, or console output, if any:
+    https://github.com/petab1te/bggp3harness/blob/master/HONGGFUZZ.REPORT.TXT
+  Link to writeup, if any:
+  CVE or other acknowledgement, if any:
+  File contents (base64 encoded please):
+    /9j/2wCEAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRQBAwQEBQQFCQUFCRQNCw0UFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFP/AABEIAgABgAMBIgACEQEDEQH/2gAMAwEAAhEDAA==
+  ---END BGGP3 ENTRY---

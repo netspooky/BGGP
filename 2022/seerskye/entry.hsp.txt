@@ -1,0 +1,44 @@
+Name or handle: SeerSkye
+Website, twitter, other online presence:
+https://twitter.com/SeerSkye
+https://www.twitch.tv/seerskye
+https://cohost.org/SeerSkye
+Target Software and Version: A sample program bundled with the windows
+release of Hot Soup Processor version 3.6
+Description of Target Software's Environment (Platform/OS, Setup
+Instructions, etc.):
+Exploit found on Windows 10. To build:
+1. Download and Extract Hot Soup Processor 3.6 from
+https://github.com/onitama/OpenHSP/releases/tag/v3.6
+2. Open the IDE program `hsed3.exe`
+3. In the editor open `sample\hspda\vtest1.hsp`
+4. Compile the program by hitting F7 or using HSP -> Compile in the top menu
+5. There should now be an exe named `hsptemp.exe` in the
+`sample\hspda` directory. Copy it to another location along with the
+`hspda.dll` found in the root hsp directory.
+6. Place my file in the same directory with the name
+`vtest_data.var`. Open the program. The crash is inconsistent based on
+garbage values in memory. If the program starts up normally, you will
+either need to replace the file after closing before trying again (as
+the program will save over it) or force quit the program in task
+manager to prevent it from overwriting the file.
+Note that you won't reproduce the crash if you start the program
+with a debugger attached! This is because starting in a debugger will
+cause the windows heap to place special values in uninitialized
+memory. The file loader will see the 0xABABABAB guard bytes after the
+file and not try to load further because the number isn't greater than
+0.
+Target File Type: The variable files saved and loaded by the hspda.dll
+plugin for the Hot Soup Processor programming language. The format
+does not have an official name, I've been calling them `hspv` files
+after the file magic `hspv\0`.
+SHA256 Hash: 07D472D45763D3FE1ABD8281051D17329DD443CD5E37F9940EA5477A66253C27
+Brief Description of Crash: File consisting of only the file magic
+crashes hspda.dll
+Was this a new crash, or a known bug? New to me, but because almost
+everything about HSP is in Japanese I have no idea if the bug is
+known.
+Link to PoC video, screenshot, or console output, if any:
+Link to writeup, if any:
+CVE or other acknowledgement, if any:
+File contents (base64 encoded please): aHNwdgA=

@@ -1,0 +1,36 @@
+ ---BEGIN BGGP3 ENTRY---
+Name or handle: Pierre Kim and Alexandre Torres
+Website, twitter, other online presence: @PierreKimSec, @AlexTorSec,
+https://pierrekim.github.io/
+Target Software and Version: freebsd-telnetd / netbsd-telnetd /
+netkit-telnetd / inetutils-telnetd / telnetd in Kerberos Version 5
+Applications - ALL versions
+Description of Target Software's Environment (Platform/OS, Setup
+Instructions, etc.): install freebsd or netbsd or netkit-telnetd or
+inetutils-telnetd or telnetd in Kerberos Version 5 Applications.
+Target File Type: STDIN :)
+SHA256 Hash:
+Brief Description of Crash: There is a 30-year old vulnerable code
+path reachable from the network allowing an attacker to force the
+server using variables before they are correctly initialized,
+resulting in 2 null pointer dereferences.
+Was this a new crash, or a known bug? New crash.
+Link to PoC video, screenshot, or console output, if any:
+Link to writeup, if any:
+https://pierrekim.github.io/blog/2022-08-24-2-byte-dos-freebsd-netbsd-telnetd-netkit-telnetd-inetutils-telnetd-kerberos-telnetd.html
+CVE or other acknowledgement, if any: no CVE
+File contents (base64 encoded please): \xff\xf7 (//c= in base64) or
+\xff\xf8 (//g= in base64)
+- ---END BGGP3 ENTRY---
+
+Additional info provided by email
+
+Hi,
+
+Please find an update of my submission:
+
+CVE: CVE-2022-39028
+
+And my patch has been used for inetutils:
+https://git.hadrons.org/cgit/debian/pkgs/inetutils.git/commit/?id=113da8021710d871c7dd72d2a4d5615d42d64289
+

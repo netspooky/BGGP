@@ -1,0 +1,19 @@
+---BEGIN BGGP3 ENTRY---
+Name or handle: ifyGecko
+Website, twitter, other online presence: n/a
+Target Software and Version: chocolate-doom (any version)
+Description of Target Software's Environment (Platform/OS, Setup Instructions, etc.): amd64/linux, install via package manager (or src)
+            However, you must make sure the file has a '.wad' extension or it will not be viewed as a valid wad file.
+            Run with: chocolate-doom -iwad crash.wad
+Target File Type: wad (where's all the data)
+SHA256 Hash: 092b95e1dfb2a22d58441239895f7ae2c74db1187e970901e0955ae92f30bb0e
+Brief Description of Crash: Having an 'IWAD' type wad file containing only the identification field and numlumps field with the
+      numlumps field set to a negative value such as -1 will cause a segfault when allocating a memory block for the allocation
+      of the lump directory from a newblock->next->prev deference that points into an invalid memory address.
+Was this a new crash, or a known bug? New crash
+Link to PoC video, screenshot, or console output, if any: n/a
+Link to writeup, if any: https://github.com/ifyGecko/BGGP3
+CVE or other acknowledgement, if any: n/a
+File contents (base64 encoded please): SVdBRP////8=
+---END BGGP3 ENTRY---
+

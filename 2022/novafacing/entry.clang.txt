@@ -1,0 +1,21 @@
+---BEGIN BGGP3 ENTRY---
+Name or handle: novafacing
+Website, twitter, other online presence: @novafacing on Twitter,
+@novafacing on GitHub
+Target Software and Version: clang
+15.0.0-++20220625103012+3d37e785c77a-1~exp1 or older
+(https://debian.pkgs.org/sid/debian-main-amd64/clang-15_15~++20220625103012+3d37e785c77a-1~exp1_amd64.deb.html)
+Description of Target Software's Environment (Platform/OS, Setup
+Instructions, etc.): `docker run -it debian:sid` then `sudo apt update
+&& sudo apt install clang-15`.
+Target File Type: C program
+SHA256 Hash: 3970d2e726f8805447972e1bc6e9159367eae806c2a7a5730cef96ca906807f5
+Brief Description of Crash: 11 Separate crashes due to mishandled
+target triples passed on command line
+Was this a new crash, or a known bug?
+Link to PoC video, screenshot, or console output, if any:
+Link to writeup, if any: https://github.com/novafacing/bggp3
+CVE or other acknowledgement, if any:
+File contents (base64 encoded please): aW50IG1haW4oKXtyZXR1cm4gMTt9Cg==
+---END BGGP3 ENTRY---
+clang-15 -target i386-apple-windows-eabi tmp.c

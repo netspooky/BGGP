@@ -1,0 +1,17 @@
+---BEGIN BGGP3 ENTRY---
+Name or handle: echel0n
+Contact Info: https://t.me/echel0n
+Website, twitter, other online presence: twitter.com/echel0n_1881, devilinside.me
+Target Software and Version: BrainFlow 5.1.0
+Description of Target Software's Environment (Platform/OS, Setup Instructions, etc.): Linux, has Dockerfile
+Target File Type: TSV
+SHA256 Hash:636e13ecac749e4aaab6e9401ea311696b6ea2d20f399fb703e48d9eb32fef1c
+Brief Description of Crash: invalid check on data_handler::read_file and DataFilter::read_file lead to memory corruption
+Was this a new crash, or a known bug? A new crash
+Link to PoC video, screenshot, or console output, if any:
+Link to writeup, if any: https://devilinside.me/blogs/brainflow-more-brainoverflow
+CVE or other acknowledgement, if any: No
+File contents (base64 encoded please): MQkxCjkJMQkxCTIKMQo=
+---END BGGP3 ENTRY---
+
+It's zero-touch reproducable with Docker.

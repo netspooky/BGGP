@@ -1,0 +1,32 @@
+---BEGIN BGGP3 ENTRY---
+  Name or handle: Vechs
+  Website, twitter, other online presence: @__Vechs on twitterland
+  Target Software and Version: $ gnome-logs --version
+gnome-logs - Version 42.0
+
+  Description of Target Software's Environment (Platform/OS, Setup Instructions, etc.): Install Fresh Ubuntu 22.04 LTS (aka basically newest and freshest LTS ubuntu) and make a one byte file, any extension to be honest (touch 1.journal -> hexedit 1.journal and then write a single byte) and launch gnome-logs from terminal : gnome-logs 1.journal
+  Target File Type: .journal
+  SHA256 Hash: c555eab45d08845ae9f10d452a99bfcb06f74a50b988fe7e48dd323789b88ee3 (1 byte crash)
+
+  Brief Description of Crash: tries to parse given file -> should stop at g_critical, but no exit condition is given -> continues til crashes
+  Was this a new crash, or a known bug? : I dont know
+  Link to PoC video, screenshot, or console output, if any:
+  Link to writeup, if any: https://innanet-user.github.io/bggp/3/writeup.txt & https://innanet-user.github.io/bggp/3/golf.txt (for actual valid 500 byte .journal file)
+  CVE or other acknowledgement, if any: $ gnome-logs 1.journal
+
+** (gnome-logs:2278): CRITICAL **: 15:52:21.588: Error opening systemd journal: No such file or directory
+
+** (gnome-logs:2278): WARNING **: 15:52:21.588: Error getting polling fd from systemd journal: No child processes
+
+** (gnome-logs:2278): WARNING **: 15:52:21.588: Error getting poll events from systemd journal: No child processes
+
+** (gnome-logs:2278): WARNING **: 15:52:21.588: Error checking reliability of systemd journal poll fd: No child processes
+
+** (gnome-logs:2278): WARNING **: 15:52:21.588: Error seeking to the end of the journal: No child processes
+Segmentation fault
+
+  File contents (base64 encoded please): $ cat 1.journal | base64
+EA==
+
+  ---END BGGP3 ENTRY---
+

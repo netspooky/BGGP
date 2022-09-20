@@ -1,0 +1,14 @@
+---BEGIN BGGP3 ENTRY---
+Name or handle: Remy
+Website, twitter, other online presence: https://twitter.com/_mattata https://remyhax.xyz/
+Target Software and Version: GNUCobol 3.1.2.0
+Description of Target Software's Environment (Platform/OS, Setup Instructions, etc.): Dockerfile to build vuln version (inc running crashing file) located at https://github.com/xen0bit/bggp3/tree/main/gnucobol
+Target File Type: .cob
+SHA256 Hash: 38cf01b12fcdf1c0ee489ce4e0137a49a179244cfea5b5f32d39ca368478e6f9
+Brief Description of Crash: File causes crash due to stack protector in creation of an an error literal due to a 5-Byte Stack based overflow. Testcase aligns a NULL to exact size of CB_ERR_LITMAX.
+Was this a new crash, or a known bug? New Crash
+Link to PoC video, screenshot, or console output, if any: https://asciinema.org/a/508541/
+Link to writeup, if any: https://remyhax.xyz/posts/bggp3-cob/
+CVE or other acknowledgement, if any: https://sourceforge.net/p/gnucobol/bugs/844/ (Patch Merged)
+File contents (base64 encoded please): CSILQkdHUMKFMzMzM8KFLi4uM8KFMzMzM8KFLi4uM8KFMzMzM8KFAA==
+---END BGGP3 ENTRY---

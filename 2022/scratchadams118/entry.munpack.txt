@@ -1,0 +1,18 @@
+---BEGIN BGGP3 ENTRY---
+  Name or handle: hyp
+  Website, twitter, other online presence: https://twitter.com/Scratchadams118
+  Target Software and Version: mpack/focal,now 1.6-8.2 amd64
+  Description of Target Software's Environment (Platform/OS, Setup Instructions, etc.):
+  Linux mern 5.16.19-76051619-generic #202204081339~1649696161~20.04~091f44b~dev-Ubuntu SMP PREEMPT Tu x86_64 x86_64 x86_64 GNU/Linux
+  apt install mpack
+  Target File Type: .eml file
+  SHA256 Hash: ac942ebf4abb32b8672d235ca89ba7a861013304cc5a9d7a0dc1a7e923353429
+  Brief Description of Crash: This crash occurs when a filename is extracted from the target file that already matches and existing filename and is over a certain number of characters. The target file can be run through the target program (munpack) twice, the first time creates the file, the second time triggers the crash.
+  Was this a new crash, or a known bug? new
+  Link to PoC video, screenshot, or console output, if any: https://medium.com/@kevin.massey1189/crashing-munpack-for-bggp3-3b0226909d63
+  Link to writeup, if any: https://medium.com/@kevin.massey1189/crashing-munpack-for-bggp3-3b0226909d63
+  CVE or other acknowledgement, if any: N/A
+  File contents (base64 encoded please): Q29udGVudC1UeXBlOnRleHQvcGxhaW47bmFtZT0iQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB
+QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFB
+QUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBIgo=
+  ---END BGGP3 ENTRY---

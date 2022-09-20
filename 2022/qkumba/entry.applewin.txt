@@ -1,0 +1,13 @@
+Name or handle: qkumba
+Website, twitter, other online presence: pferrie.epizy.com, @a2_qkumba
+Target Software and Version: AppleWin v1.30.10.0
+Description of Target Software's Environment (Platform/OS, Setup
+Instructions, etc.): requires Windows and a bootable hard-disk image
+Target File Type: Apple Binary
+SHA256 Hash: 8fe3a1c2b3c109941acf4b65582d9f46f13f4ebaed85805b4f76742a3dc78192
+Brief Description of Crash: null-pointer access causes application termination
+Was this a new crash, or a known bug? new crash
+Link to PoC video, screenshot, or console output, if any:
+Link to writeup, if any: https://github.com/AppleWin/AppleWin/issues/1126
+CVE or other acknowledgement, if any:
+File contents (base64 encoded please): re/Are7A

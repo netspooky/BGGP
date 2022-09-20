@@ -1,0 +1,15 @@
+---BEGIN BGGP3 ENTRY---
+Name or handle: qkumba
+Website, twitter, other online presence: http://pferrie.epizy.com
+Target Software and Version: DOSBox 0.74
+Description of Target Software's Environment (Platform/OS, Setup
+Instructions, etc.): Windows installer from DOSBox.com
+Target File Type: .com
+SHA256 Hash: 897c92e49613565103fc552646cc494ab20a98da18a30bad1653777bb0173f82
+Brief Description of Crash: DOSBox crashes via write to NULL pointer
+Was this a new crash, or a known bug? known bug
+Link to PoC video, screenshot, or console output, if any:
+Link to writeup, if any:
+CVE or other acknowledgement, if any:
+File contents (base64 encoded please): YsB=
+---END BGGP3 ENTRY---

@@ -1,0 +1,18 @@
+---BEGIN BGGP3 ENTRY---
+Name or handle: nopnopgoose
+Website, twitter, other online presence: @NopNopGoose on Twitter
+Target Software and Version: PCSX 2 Playstation 2 Emulator Git Master (commit efc09a7b47d0261f33d1d6f83e8b69307fbb60a9) (Latest binary release most likely affected too, just realized too late I didn't check)
+Description of Target Software's Environment (Platform/OS, Setup Instructions, etc.):
+    Pretty sure a release version will crash in the same way.
+    Annoying part of setup, need to get ahold of a PS2 BIOS file in order for the emulator to function, then start it with:
+    ./pcsx2 --elf crasher.elf
+   
+Target File Type: ELF file (supposedly... but actually 45 bytes from /dev/random)
+SHA256 Hash: c55cecc8984ffb976dbadb5b24c75153
+Brief Description of Crash: Null pointer dereference due to dereferencing the ELF program header, which doesn't exist because a sanity check in another part of the ELF parser realizes that e_phoff points way beyond the end of the file and initializes pheader to NULL
+Was this a new crash, or a known bug?  New Crash
+Link to PoC video, screenshot, or console output, if any: console crash output available in https://gist.github.com/nopnopgoose/49ddcb055080bc3c0bd2299e206f01ea
+Link to writeup, if any: Very quick "writeup": https://gist.github.com/nopnopgoose/49ddcb055080bc3c0bd2299e206f01ea
+CVE or other acknowledgement, if any: Probably not a terribly security relevant surface, and a not-especially exploitable null deref in that, so no CVE/patches.
+File contents (base64 encoded please): a0I+WipI5TcHaxWg5gTeVTA6lKhCAhuw3BB3xK1uDl1BDGzX8T+RxcEjLAzi
+---END BGGP3 ENTRY---

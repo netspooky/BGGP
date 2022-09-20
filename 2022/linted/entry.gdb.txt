@@ -1,0 +1,14 @@
+---BEGIN BGGP3 ENTRY---
+Name or handle: linted
+Website, twitter, other online presence: @micheal_merrill
+Target Software and Version: gdb 12.0.90
+Description of Target Software's Environment (Platform/OS, Setup Instructions, etc.): Any linux system which can run gdb and any statically compiled binary with symbols. The crash is possible with any binary, however the POC file won't work out of the box. Simply run `gdb --command=<bggp3 entry file> <random elf file>
+Target File Type: ASCII text
+SHA256 Hash: 98b2b1fde364bbad16649f139f7923289d581ca344663d1d9171a20fde689965
+Brief Description of Crash: When attempting to eXamine memory, gdb will attempt to parse parameters to see if any of them are functions which need evaluating. When a digit is passed as the function name, a gdb internal assert fails causing a crash.
+Was this a new crash, or a known bug? New crash (I can't find any references at least)
+Link to PoC video, screenshot, or console output, if any: https://imgur.com/qDOSsa7 https://imgur.com/IiijcYE
+Link to writeup, if any: N/A
+CVE or other acknowledgement, if any: N/A
+File contents (base64 encoded please): c3RhcnQKeCAzKCRyKQ==
+---END BGGP3 ENTRY---
