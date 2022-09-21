@@ -36,10 +36,10 @@ For the writeup and patch modifiers, the associated writeups and patches are lin
 
 | Author | Date | Target | Size | Writeup | PC | Exec | Patch | Total Points | Notes |
 |--------|------|--------|------|---------|----|------|-------|--------------|-------|
-| [David3141593](./david3141593) | 20220729 | chip8 0.2.0-1ubuntu1 | 20 | +[1024](https://www.da.vidbuchanan.co.uk/blog/bggp3.html) | +0 | +2048 | +[4096](https://github.com/danirod/chip8/pull/35) | **11224** | |
+| [David3141593](./david3141593) | 20220729 | chip8 0.2.0-1ubuntu1 | 20 | +[1024](https://www.da.vidbuchanan.co.uk/blog/bggp3.html) | +0 | +2048 | +[4096](https://github.com/danirod/chip8/pull/35) | **11244** | |
+| [Dan Bastone](./danbastone) | 20220903 | Lotus 1-2-3 R3 for Linux < 1.0.0rc3 | 34 | +[1024](https://github.com/taviso/123elf/issues/103) | +0 | +2048 | +[4096](https://github.com/taviso/123elf/pull/104) | **11230** | This score was adjusted, the exploit points were mistakenly not given. See the writeup for details. |
 | [PierreKimSec](./pierrekim_alextor) & [AlexTorSec](./pierrekim_alextor) | 20220824 | multiple versions of telnetd | 2 | +[1024](https://pierrekim.github.io/blog/2022-08-24-2-byte-dos-freebsd-netbsd-telnetd-netkit-telnetd-inetutils-telnetd-kerberos-telnetd.html) | +0 | +0 | +[4096](https://git.hadrons.org/cgit/debian/pkgs/inetutils.git/commit/?id=113da8021710d871c7dd72d2a4d5615d42d64289) | **9214** | |
 | [fridayortiz](./fridayortiz) | 20220717 | Cave Story (HaikuOS) | 8 | +[1024](https://ortiz.sh/identity/2022/07/17/BGGP3.html) | +0 | +0 | +[4096](https://github.com/EXL/NXEngine/pull/9) | **9208** | |
-| [Dan Bastone](./danbastone) | 20220903 | Lotus 1-2-3 R3 for Linux < 1.0.0rc3 | 34 | +[1024](https://github.com/taviso/123elf/issues/103) | +0 | +0 | +[4096](https://github.com/taviso/123elf/pull/104) | **9182** | |
 | [\_mattata](./_mattata) | 20220714 | GNUCobol v3.1.2.0 | 40 | +[1024](https://remyhax.xyz/posts/bggp3-cob/) | +0 | +0 | +[4096](https://sourceforge.net/p/gnucobol/code/4656/) | **9176** | |
 | [s01den](./s01den) | 20220727 | upx git-d7ba31+ | 518 | +[1024](https://s01den.github.io/notes_upx.txt) | +0 | +0 | +[4096](https://github.com/upx/upx/commit/e95a82e390b5b1b9d20d65ed6d2297f47048a9d8) | **8698** | |
 | [royhax91](./royhax91) | 20220804 | MilkyTracker v1.03.00 | 701 | +[1024](https://github.com/milkytracker/MilkyTracker/issues/275) | +0 | +0 | +[4096](https://github.com/milkytracker/MilkyTracker/issues/275) | **8515** | |
