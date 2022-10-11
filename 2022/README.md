@@ -17,7 +17,7 @@ The scores were calculated as follows:
 There were a total of 34 entries, more than double from last year and over 8 times the amount of the first BGGP. 
 
 - 23 entries came with writeups
-- 2 entries included code execution. This was challenging because some entries could have achieved this, but it would've added greatly to the file size.
+- 3 entries included code execution. This was challenging because some entries could have achieved this, but it would've added greatly to the file size.
 - 8 entries had patches that were authored and merged before the end of the competition.
 - 2 additional entries had patches which were rejected :(
 - 2 entries did not qualify as official entries due to size, delivery method, or other issue. These are included at the end.
