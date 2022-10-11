@@ -22,11 +22,12 @@ There were a total of 34 entries, more than double from last year and over 8 tim
 - 2 additional entries had patches which were rejected :(
 - 2 entries did not qualify as official entries due to size, delivery method, or other issue. These are included at the end.
 
-Also, three new CVEs were awarded to participants 
+Also, four new CVEs were awarded to participants 
 
 - [CVE-2022-39028](https://nvd.nist.gov/vuln/detail/CVE-2022-39028) - telnetd in GNU Inetutils through 2.3, MIT krb5-appl through 1.0.3, and derivative works
 - [CVE-2022-39843](https://www.cvedetails.com/cve/CVE-2022-39843/) - Lotus 1-2-3 R3 for Linux < 1.0.0rc3
 - [CVE-2022-34927](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-34927) - MilkyTracker v1.03.00
+- [CVE-2022-40363](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-40363) - Flipper Zero < v0.65.2
 
 ## Scored Entries
 
