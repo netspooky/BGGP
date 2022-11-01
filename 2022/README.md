@@ -20,7 +20,8 @@ There were a total of 34 entries, more than double from last year and over 8 tim
 - 3 entries included code execution. This was challenging because some entries could have achieved this, but it would've added greatly to the file size.
 - 8 entries had patches that were authored and merged before the end of the competition.
 - 2 additional entries had patches which were rejected :(
-- 2 entries did not qualify as official entries due to size, delivery method, or other issue. These are included at the end.
+- 2 entries did not qualify as official entries due to size, delivery method, or other issue. These are included in the Honorable Mentions section.
+- 2 entries came after BGGP and were added to this repo in the Honorable Mentions section.
 
 Also, four new CVEs were awarded to participants 
 
@@ -77,6 +78,7 @@ These entries were written with BGGP3 in mind, but didn't qualify due to reasons
 - [TheXcellerator](./xcellerator) - 20220826 - [tetsuji](https://xcellerator.github.io/posts/tetsuji/): Pokemon Crystal RCE 
 - [VVX7](./vvx7) - 20220902 - [Flipper Zero NFC Buffer Overflow](https://vvx7.io/posts/2022/09/your-amiibos-haunted/)
 - eatscrayon - [Things that are not BGGP3 Entries](https://forum.spacehey.com/topic?id=89761) - Weirdness in CHASOPRO 4.0.249, Famitracker v0.4.6, and Windows Event Logs
+- jordan9001 - [Too late for BGGP3, too early for starships](https://forum.spacehey.com/topic?id=93101) - procmon64.exe crash via PML files. [Full writeup](https://www.atredis.com/blog/2022/10/29/symbolic-triage-making-the-best-of-a-good-situation).
 
 ## .fini
 
